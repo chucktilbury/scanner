@@ -1,0 +1,108 @@
+#
+# Format:
+# - Comments start with a '#' and end with a '\n'
+# - A literal word starts with a name and ends with a quoted string or
+#   a regular expression that begins with a '(' and ends with a ')'.
+#   - The name is a defined int that is above 300.
+#   - The quoted string is a literal that is recognized.
+#
+#
+
+BREAK: "break"
+CASE: "case"
+CONTINUE: "continue"
+CONST: "const"
+DEFAULT: "default"
+IMPORT: "import"
+DO: "do"
+ELSE: "else"
+FOR: "for"
+IF: "if"
+RETURN: "return"
+SWITCH: "switch"
+WHILE: "while"
+TRUE: "true"
+FALSE: "false"
+IN: "in"
+YIELD: "yield"
+EXIT: "exit"
+TRY: "try"
+EXCEPT: "except"
+RAISE: "raise"
+CREATE: "create"
+DESTROY: "destroy"
+NAMESPACE: "namespace"
+CLASS: "class"
+STRUCT: "struct"
+PUBLIC: "public"
+PRIVATE: "private"
+PROTECTED: "protected"
+NUM: "num"
+NUM: "number"
+NOTHING: "nothing"
+NOTHING: "noth"
+STRING: "string"
+STRING: "strg"
+BOOLEAN: "bool"
+BOOLEAN: "boolean"
+LIST: "list"
+DICT: "dict"
+TRACE: "trace"
+PRINT: "print"
+TYPE: "type"
+OR: "or"
+AND: "and"
+NOT: "not"
+
+# multi-character operators composed by punct.
+LTEQU: "<="
+GTEQU: ">="
+EQUALITY: "=="
+NEQU: "!="
+OR: "||"
+AND: "&&"
+ADDASSIGN: "+="
+SUBASSIGN: "-="
+MULASSIGN: "*="
+DIVASSIGN: "/="
+MODASSIGN: "%="
+INCREMENT: "++"
+DECREMENT: "--"
+
+# single character tokens as punct.
+PLUS: "+"
+MINUS: "-"
+EQU: "="
+SLASH: "/"
+STAR: "*"
+PERCENT: "%"
+OPAREN: "("
+CPAREN: ")"
+POUND: "#"
+OCURLY: "{"
+CCURLY: "}"
+COMMA: ","
+DOT: "."
+OPOINTY: "<"
+CPOINTY: ">"
+COLON: ":"
+BAR: "|"
+OSQUARE: "["
+CSQUARE: "]"
+AT: "@"
+DOLLAR: "$"
+AMPERSAND: "&"
+TILDE: "~"
+BANG: "!"
+
+# patterns
+SYMBOL: ([a-zA-Z_][a-zA-Z_0-9]*)
+SIGNED: ([0-9]+)
+FLOATING: (([0-9]*\.)?[0-9]+([Ee][-+]?[0-9]+)?)
+UNSIGNED: (0[Xx][0-9a-fA-F]+)
+DQSTRING: ("\"".*"\"")
+SQSTRING: ("\'".*"\'")
+
+# recognized but not returned
+:("/*"[.\n]*"*/")
+:("//".*)

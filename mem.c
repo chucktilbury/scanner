@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "memory.h"
+#include "mem.h"
 #ifdef USE_GC
 #include <gc.h>
 #endif

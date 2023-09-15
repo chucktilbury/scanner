@@ -1,17 +1,19 @@
 CC		=	gcc
-TARGET	=	scanner
-OBJS	=	scanner.o \
+TARGET	=	genscan
+OBJS	=	scan.o \
 			fileio.o \
-			memory.o \
-			tokens.o \
+			mem.o \
+			tok.o \
 			strs.o
+INCS	=	-I.
 DEBUG	=	-g
-COPTS	=	-Wall -Wextra -DUSE_GC
+WARNS	=	-Wall -Wextra -Wpedantic
+CFGS	=	-DUSE_GC
 LOPTS	=
 LIBS	=	-lgc
 
 %.o:%.c
-	$(CC) $(DEBUG) $(COPTS) -c -o $@ $<
+	$(CC) $(INCS) $(DEBUG) $(CFGS) $(WARNS) -c -o $@ $<
 
 all: $(TARGET)
 

@@ -5,8 +5,8 @@
 #include <assert.h>
 
 #include "fileio.h"
-#include "memory.h"
-#include "tokens.h"
+#include "mem.h"
+#include "tok.h"
 
 static FSTK fp;
 static TOKEN token;

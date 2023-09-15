@@ -3,7 +3,7 @@
 #include <string.h>
 #include <assert.h>
 
-#include "memory.h"
+#include "mem.h"
 #include "strs.h"
 
 struct _string_ {

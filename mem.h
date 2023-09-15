@@ -1,5 +1,5 @@
-#ifndef _MEMORY_H
-#define _MEMORY_H
+#ifndef _MEM_H
+#define _MEM_H
 
 #include <stddef.h>
 
@@ -21,4 +21,4 @@ void mem_free(void* ptr);
 #define _dup_obj(p, t) (t*)mem_dup((void*)(p), sizeof(t))
 #define _dup_array(p, t, n) (t*)mem_dup((void*)(p), sizeof(t) * (n))
 
-#endif
+#endif /* _MEM_H */

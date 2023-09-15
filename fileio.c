@@ -6,7 +6,7 @@
 #include <errno.h>
 
 #include "fileio.h"
-#include "memory.h"
+#include "mem.h"
 
 struct _file_ptr_ {
     FILE* fp;
